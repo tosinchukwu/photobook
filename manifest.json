@@ -2,7 +2,7 @@
   "name": "Pro PhotoBook Studio",
   "short_name": "PhotoBook",
   "description": "Luxury photobook with 100 frames & 50 transitions",
-  "start_url": "/",
+  "start_url": "https://tosinchukwu.github.io/photobook/",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#000000",
