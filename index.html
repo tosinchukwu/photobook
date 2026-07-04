@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pro PhotoBook</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Your Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+  <!-- TOP TOOLBAR -->
+  <div class="toolbar top">
+    <button id="addPhotosBtn">📸 Add Photos</button>
+    <input type="file" id="photoInput" accept="image/*" multiple style="display:none">
+    <button id="toggleFrameBtn">🖼️ Frame</button>
+    <button id="toggleTransitionBtn">✨ Transition</button>
+    <button id="toggleTextBtn">✏️ Text</button>
+    <button id="musicBtn">🎵 Music</button>
+    <button id="exportBtn">💾 Save/Share</button>
+  </div>
+
+  <!-- SWIPER GALLERY -->
+  <div class="swiper" id="mainSwiper">
+    <div class="swiper-wrapper" id="slidesWrapper">
+      <!-- Slides are injected here by JavaScript -->
+    </div>
+    <!-- Navigation Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- BOTTOM CONTROLS (Contextual) -->
+  <div class="toolbar bottom" id="bottomControls">
+    <div id="frameSelector" style="display:none;">
+      <input type="range" min="0" max="99" value="0" id="frameSlider">
+      <span id="frameNameDisplay">Frame 1/100</span>
+    </div>
+    <div id="textEditor" style="display:none; width:100%;">
+      <input type="text" id="textInput" placeholder="Type your beautiful text..." style="flex:1; padding:8px; border-radius:20px; border:none;">
+      <input type="color" id="textColor" value="#ffffff">
+      <select id="textFont"><option value="Arial">Arial</option><option value="Georgia">Georgia</option><option value="'Courier New'">Courier</option></select>
+    </div>
+    <div id="musicPlayer" style="display:none; align-items:center; gap:10px;">
+      <input type="file" accept="audio/*" id="musicInput">
+      <button id="playMusicBtn">▶ Play</button>
+      <button id="stopMusicBtn">⏹ Stop</button>
+    </div>
+  </div>
+
+  <!-- Hidden Audio Element -->
+  <audio id="bgAudio" loop></audio>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
