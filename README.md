@@ -1,8 +1,3 @@
-Got it! You want the entire README in one single, unsplit block – no extra text, no commands, just the pure markdown.
-
-Here it is. Copy everything inside the code block below and paste it directly into your README.md file:
-
-```markdown
 # 📸 Pro PhotoBook PWA
 
 A luxury, offline‑first Progressive Web App that turns your phone into a creative photobook studio.  
